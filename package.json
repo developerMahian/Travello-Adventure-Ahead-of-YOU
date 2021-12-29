@@ -8,8 +8,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "swiper": "^7.4.1"
-  }
+  "license": "ISC"
 }
