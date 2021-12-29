@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+  font-family: "Montserrat", sans-serif;
+  color: #10221b;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+/*# sourceMappingURL=main.css.map */
