@@ -1,0 +1,32 @@
+.ideas-cards {
+	margin: 1.5rem 0;
+	text-align: center;
+
+	.card-img {
+		width: 18rem;
+		height: 18rem;
+		margin: 1rem auto;
+		border-radius: 9999px;
+		overflow: hidden;
+	}
+
+	.card-content {
+		padding: 0.65rem 2rem;
+
+		h3 {
+			color: $primary-color;
+			margin-bottom: 1rem;
+		}
+
+		p {
+			line-height: 1.65;
+			font-weight: 500;
+			margin-bottom: 2rem;
+		}
+
+		a.btn {
+			font-size: 1.65rem;
+			padding: 1rem 2.4rem;
+		}
+	}
+}

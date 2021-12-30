@@ -8,22 +8,21 @@
 *::before {
 	margin: 0;
 	padding: 0;
-	box-sizing: inherit;
+	box-sizing: border-box;
 	border: none;
 	outline: none;
 	text-decoration: none;
-	transition: 0.1s linear;
+	transition: 0.2s ease-in-out;
 }
 
 html {
 	font-size: 62.5%;
 	overflow-x: hidden;
 	scroll-behavior: smooth;
-	box-sizing: border-box;
 }
 
 html::-webkit-scrollbar {
-	width: 10px;
+	width: 8px;
 }
 
 html::-webkit-scrollbar-thumb {
@@ -37,4 +36,29 @@ html::-webkit-scrollbar-track {
 body {
 	font-size: $default-font-size;
 	font-weight: 400;
+}
+
+@media (min-width: 1300px) {
+	.container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl {
+		max-width: 1220px !important;
+	}
+}
+
+section {
+	padding: 4rem 0;
+}
+
+h1,
+h2,
+h3 {
+	text-transform: capitalize;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }

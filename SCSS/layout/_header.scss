@@ -1,115 +1,130 @@
-header .container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 8rem;
-	text-transform: capitalize;
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	background-color: transparent;
 
-	.logo {
-		font-size: 2.5rem;
-		font-weight: 700;
-		cursor: pointer;
-
-		.fas {
-			color: $primary-color;
-			margin-right: 6px;
-		}
+	&.snap {
+		background-color: $white-color;
+		box-shadow: 0 0.4rem 2rem rgba($color: #000000, $alpha: 0.1);
 	}
 
-	nav {
+	.container {
 		display: flex;
+		justify-content: space-between;
 		align-items: center;
-		gap: 2rem;
+		height: 8rem;
+		text-transform: capitalize;
 
-		ul {
-			list-style: none;
-			display: flex;
-			gap: 2.2rem;
-		}
+		.logo {
+			font-size: 2.5rem;
+			font-weight: 700;
+			cursor: pointer;
 
-		a {
-			font-size: 1.6rem;
-			font-weight: 600;
-			transition: color 0.2s ease-in-out;
-
-			&:hover {
+			.fas {
 				color: $primary-color;
+				margin-right: 6px;
 			}
 		}
 
-		.nav-icons {
+		nav {
 			display: flex;
+			align-items: center;
 			gap: 2rem;
 
-			a,
-			.fas {
-				font-size: 2.6rem;
+			ul {
+				list-style: none;
+				display: flex;
+				gap: 2.2rem;
+			}
+
+			a {
+				font-size: 1.6rem;
+				font-weight: 600;
+				transition: color 0.2s ease-in-out;
 
 				&:hover {
 					color: $primary-color;
 				}
 			}
 
-			.fas {
-				cursor: pointer;
-				transition: color 0.2s ease-in-out;
+			.nav-icons {
+				display: flex;
+				gap: 2rem;
+
+				a,
+				.fas {
+					font-size: 2.6rem;
+
+					&:hover {
+						color: $primary-color;
+					}
+				}
+
+				.fas {
+					cursor: pointer;
+					transition: color 0.2s ease-in-out;
+				}
 			}
 		}
 	}
+}
 
-	#nav-search-box {
-		position: absolute;
-		inset: 0;
+#nav-search-box {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba($color: #000000, $alpha: 0.8);
+	transition: transform 0.3s ease-in-out;
+	z-index: 1000;
+	transform: translateY(-100%);
+
+	&.search-active {
+		transform: translateY(0);
+	}
+
+	.fas:hover {
+		color: $primary-color;
+	}
+
+	form {
 		display: flex;
 		align-items: center;
-		justify-content: center;
-		background-color: rgba($color: #000000, $alpha: 0.8);
-		transition: transform 0.3s ease-in-out;
-		transform: translateY(-100%);
+		width: 55vw;
+		padding: 1.5rem 0;
+		border-bottom: 2px solid $white-color;
 
-		&.search-active {
-			transform: translateY(0);
-		}
-
-		.fas:hover {
-			color: $primary-color;
-		}
-
-		form {
-			display: flex;
-			align-items: center;
-			width: 55vw;
-			padding: 1.5rem 0;
-			border-bottom: 2px solid $white-color;
-
-			input {
-				width: 100%;
-				background-color: transparent;
-				color: $white-color;
-				font-size: 2rem;
-				font-weight: 500;
-				padding: 1rem 0;
-			}
-
-			button.fas {
-				background-color: transparent;
-				color: $white-color;
-				font-size: 3rem;
-				cursor: pointer;
-			}
-		}
-
-		#close-search {
-			position: absolute;
-			top: 2rem;
-			right: 3rem;
-			font-size: 6rem;
+		input {
+			width: 100%;
+			background-color: transparent;
 			color: $white-color;
-			cursor: pointer;
+			font-size: 2rem;
+			font-weight: 500;
+			padding: 1rem 0;
+		}
 
-			&:hover {
-				color: $primary-color;
-			}
+		button.fas {
+			background-color: transparent;
+			color: $white-color;
+			font-size: 3rem;
+			cursor: pointer;
+		}
+	}
+
+	#close-search {
+		position: absolute;
+		top: 2rem;
+		right: 3rem;
+		font-size: 6rem;
+		color: $white-color;
+		cursor: pointer;
+
+		&:hover {
+			color: $primary-color;
 		}
 	}
 }

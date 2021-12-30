@@ -31,22 +31,22 @@
 
 <body>
   <!-- Header Start -->
-  <header>
+  <header id="header">
 
     <div class="container">
 
       <div class="logo">
-        <i class="fas fa-hiking"></i>Travello
+        <a href="/"><i class="fas fa-hiking"></i>Travello</a>
       </div>
 
       <nav>
         <ul>
-          <li><a href="#">home</a></li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">shop</a></li>
-          <li><a href="#">packages</a></li>
-          <li><a href="#">reviews</a></li>
-          <li><a href="#">blogs</a></li>
+          <li><a href="#home">home</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#shop">shop</a></li>
+          <li><a href="#packages">packages</a></li>
+          <li><a href="#reviews">reviews</a></li>
+          <li><a href="#blogs">blogs</a></li>
         </ul>
 
         <div class="nav-icons">
@@ -55,49 +55,135 @@
         </div>
       </nav>
 
-      <div id="nav-search-box">
-        <form action="javascript:void(0);">
-          <input type="text" placeholder="search here..." autocomplete="off">
-          <button class="fas fa-search"></button>
-        </form>
-
-        <div id="close-search" class="fas fa-times"></div>
-      </div>
-
     </div>
 
   </header>
+
+  <!-- Navigation Search -->
+  <div id="nav-search-box">
+    <form action="javascript:void(0);">
+      <input type="text" placeholder="search here..." autocomplete="off">
+      <button class="fas fa-search"></button>
+    </form>
+    <div id="close-search" class="fas fa-times"></div>
+  </div>
   <!-- Header End -->
 
   <main>
-
     <!-- Home Starts -->
     <section id="home">
 
       <!-- Slider main container -->
-      <div class="swiper">
+      <div class="swiper home-slider">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          ...
+          <div class="swiper-slide">
+            <div class="slider-box slider-box-1">
+              <div class="slider-content">
+                <span>never stop</span>
+                <h3>exploring</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ex molestias soluta consequatur
+                  saepe aliquam, excepturi delectus consequuntur minus!</p>
+                <a class="btn" href="#">get started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="slider-box slider-box-2">
+              <div class="slider-content">
+                <span>make tour</span>
+                <h3>amazing</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ex molestias soluta consequatur
+                  saepe aliquam, excepturi delectus consequuntur minus!</p>
+                <a class="btn" href="#">get started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="slider-box slider-box-3">
+              <div class="slider-content">
+                <span>explore the</span>
+                <h3>new world</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ex molestias soluta consequatur
+                  saepe aliquam, excepturi delectus consequuntur minus!</p>
+                <a class="btn" href="#">get started</a>
+              </div>
+            </div>
+          </div>
         </div>
+
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
 
         <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
       </div>
 
     </section>
     <!-- Home End -->
 
+    <!-- About Start -->
+    <section id="ideas" class="container">
+      <div class="ideas-heading">
+        <h1>Adventure Ideas!</h1>
+      </div>
+
+      <div class="ideas_content row justify-content-between">
+        <div class="ideas-cards col-xs-12 col-sm-6 col-lg-3">
+          <div class="card-img">
+            <img src="/images/category-1.jpg" alt="Bungee Jumping">
+          </div>
+
+          <div class="card-content">
+            <h3>Bungee Jumping</h3>
+            <p>Falling through the skies attached to only a cord is as big as adrenaline rushes get.</p>
+            <a class="btn" href="#">read more</a>
+          </div>
+        </div>
+
+        <div class="ideas-cards col-xs-12 col-sm-6 col-lg-3">
+          <div class="card-img">
+            <img src="/images/category-2.jpg" alt="Bungee Jumping">
+          </div>
+
+          <div class="card-content">
+            <h3>Zip Lines</h3>
+            <p>Put on a harness and throw yourself across a river gorge on one of our many zip
+              lines.</p>
+            <a class="btn" href="#">read more</a>
+          </div>
+        </div>
+
+        <div class="ideas-cards col-xs-12 col-sm-6 col-lg-3">
+          <div class="card-img">
+            <img src="/images/category-3.jpg" alt="Bungee Jumping">
+          </div>
+
+          <div class="card-content">
+            <h3>Bungee Jumping</h3>
+            <p>Falling through the skies attached to only a cord is as big as adrenaline rushes get.</p>
+            <a class="btn" href="#">read more</a>
+          </div>
+        </div>
+
+        <div class="ideas-cards col-xs-12 col-sm-6 col-lg-3">
+          <div class="card-img">
+            <img src="/images/category-4.jpg" alt="Bungee Jumping">
+          </div>
+
+          <div class="card-content">
+            <h3>Bungee Jumping</h3>
+            <p>Falling through the skies attached to only a cord is as big as adrenaline rushes get.</p>
+            <a class="btn" href="#">read more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About End -->
   </main>
 
 

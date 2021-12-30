@@ -1,0 +1,15 @@
+.btn {
+	display: inline-block;
+	background-color: transparent;
+	color: $secondary-color;
+	border: 2px solid $secondary-color;
+	padding: 1.25rem 3rem;
+	text-transform: capitalize;
+	font-size: 1.7rem;
+	font-weight: 600;
+}
+
+.btn:hover {
+	color: $white-color;
+	background-color: $secondary-color;
+}
