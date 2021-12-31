@@ -1,7 +1,115 @@
-section#ideas {
-	.ideas-heading h1 {
-		font-size: 4rem;
-		margin-bottom: 1rem;
+section#about {
+	background-color: $tertiary-color;
+
+	.row {
+		align-items: center;
+	}
+
+	.about-img {
+		width: 42rem;
+		padding-right: 5rem;
+		padding-bottom: 5rem;
+		cursor: pointer;
+
+		img {
+			width: 100%;
+			position: relative;
+			box-shadow: 4rem 4rem 0 rgba($color: #000000, $alpha: 0.1);
+			transition-duration: 0.26s;
+		}
+
+		&:hover img {
+			transform: translateX(0.6rem) translateY(0.6rem);
+			box-shadow: 2.5rem 2.5rem 0 rgba($color: #000000, $alpha: 0.1);
+		}
+	}
+
+	.about-content {
+		padding: 2rem;
+
+		h3 {
+			color: $primary-color;
+			font-size: 3rem;
+			margin-bottom: 2rem;
+		}
+
+		p {
+			line-height: 1.8;
+			font-weight: 500;
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+section#packages {
+	background-color: $tertiary-color;
+
+	.section-heading h1 {
+		margin-bottom: 1.5rem;
+	}
+}
+
+section#services {
+	background-color: $tertiary-color;
+}
+
+section#contact {
+	text-align: center;
+
+	.section-heading h1 {
+		margin-bottom: 2.5rem;
+	}
+
+	.contact-text p {
+		max-width: 70rem;
+		margin: 0 auto;
+		font-weight: 500;
+		line-height: 1.8;
+	}
+
+	.contact-form {
+		margin-top: 2.5rem;
+
+		form {
+			margin: 0 auto;
+			width: 70rem;
+			display: flex;
+			border: 2px solid $secondary-color;
+			border-radius: 99rem;
+			padding: 0.8rem;
+
+			input {
+				flex: 1;
+				font-size: 1.8rem;
+				font-weight: 600;
+				padding: 1rem 0.5rem;
+				border-radius: 99rem;
+			}
+
+			a.btn {
+				border-radius: 99rem;
+				background-color: $secondary-color;
+				color: $white-color;
+				font-weight: 600;
+				padding: 1rem 3.5rem;
+
+				&:hover {
+					background-color: $white-color;
+					color: $secondary-color;
+				}
+			}
+		}
+	}
+}
+
+section#client-logos {
+	background-color: $tertiary-color;
+
+	.row div {
 		text-align: center;
+	}
+
+	img {
+		height: 12rem;
 	}
 }

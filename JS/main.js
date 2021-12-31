@@ -33,7 +33,7 @@ closeSearch.addEventListener("click", () =>
 );
 
 // Home Banner Swiper Slider...
-const swiper = new Swiper(".home-slider", {
+var swiper = new Swiper(".home-slider", {
 	loop: true,
 	grabCursor: true,
 	watchSlidesProgress: true,
@@ -45,5 +45,52 @@ const swiper = new Swiper(".home-slider", {
 	navigation: {
 		nextEl: ".swiper-button-next",
 		prevEl: ".swiper-button-prev",
+	},
+});
+
+// Shop Featured Products Swiper Slider...
+var swiper = new Swiper(".shop-slider", {
+	loop: true,
+	grabCursor: true,
+	// Navigation arrows
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 15,
+		},
+		992: {
+			slidesPerView: 3,
+			spaceBetween: 20,
+		},
+		1240: {
+			slidesPerView: 4,
+			spaceBetween: 25,
+		},
+	},
+});
+
+// Reviews Swiper Slider...
+var swiper = new Swiper(".reviews-slider", {
+	loop: true,
+	grabCursor: true,
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 15,
+		},
+		1024: {
+			slidesPerView: 3,
+			spaceBetween: 25,
+		},
 	},
 });

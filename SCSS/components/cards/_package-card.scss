@@ -1,0 +1,54 @@
+.package-card {
+	width: 100%;
+	padding: 2rem;
+	margin-top: 3rem;
+	border: 2px solid $secondary-color;
+	border-radius: 5px;
+	background-color: $white-color;
+	cursor: pointer;
+
+	&--img {
+		border-radius: 5px;
+		overflow: hidden;
+	}
+
+	&--content {
+		text-align: center;
+		margin-top: 1.65rem;
+
+		h3,
+		.package-pricing {
+			font-size: 2.2rem;
+			margin: 1rem 0;
+		}
+
+		.package-pricing {
+			color: $primary-color;
+			font-weight: 500;
+		}
+
+		p {
+			font-weight: 500;
+		}
+
+		a.btn {
+			border-radius: 5px;
+		}
+
+		a.btn:hover {
+			background-color: $white-color;
+			color: $secondary-color;
+		}
+	}
+
+	&:hover {
+		background-color: $secondary-color;
+
+		h3,
+		p,
+		a {
+			color: $white-color;
+			border-color: $white-color;
+		}
+	}
+}

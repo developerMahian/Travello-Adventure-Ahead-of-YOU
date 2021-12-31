@@ -21,6 +21,7 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 html::-webkit-scrollbar {
@@ -38,6 +39,7 @@ html::-webkit-scrollbar-track {
 body {
   font-size: 1.5rem;
   font-weight: 400;
+  line-height: 1.6;
 }
 
 @media (min-width: 1300px) {
@@ -50,8 +52,14 @@ body {
   }
 }
 
-section {
-  padding: 4rem 0;
+section:not(#home) {
+  padding: 6rem 0;
+}
+
+.section-heading h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 h1,
@@ -65,6 +73,22 @@ img {
   height: auto;
 }
 
+.zoom-effect-img {
+  overflow: hidden;
+}
+
+.zoom-effect-img img {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.zoom-effect-img:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 header {
   position: fixed;
   top: 0;
@@ -76,8 +100,8 @@ header {
 
 header.snap {
   background-color: #fff;
-  -webkit-box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.15);
 }
 
 header .container {
@@ -241,7 +265,7 @@ section#home .slider-box {
 }
 
 section#home .swiper-slide .slider-box {
-  background-position: bottom center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   display: -webkit-box;
@@ -306,10 +330,130 @@ section#home .swiper-button-prev::after {
   font-size: 3rem;
 }
 
-section#ideas .ideas-heading h1 {
-  font-size: 4rem;
-  margin-bottom: 1rem;
+section#about {
+  background-color: #eee;
+}
+
+section#about .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#about .about-img {
+  width: 42rem;
+  padding-right: 5rem;
+  padding-bottom: 5rem;
+  cursor: pointer;
+}
+
+section#about .about-img img {
+  width: 100%;
+  position: relative;
+  -webkit-box-shadow: 4rem 4rem 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 4rem 4rem 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition-duration: 0.26s;
+          transition-duration: 0.26s;
+}
+
+section#about .about-img:hover img {
+  -webkit-transform: translateX(0.6rem) translateY(0.6rem);
+          transform: translateX(0.6rem) translateY(0.6rem);
+  -webkit-box-shadow: 2.5rem 2.5rem 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 2.5rem 2.5rem 0 rgba(0, 0, 0, 0.1);
+}
+
+section#about .about-content {
+  padding: 2rem;
+}
+
+section#about .about-content h3 {
+  color: #219150;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+section#about .about-content p {
+  line-height: 1.8;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+section#packages {
+  background-color: #eee;
+}
+
+section#packages .section-heading h1 {
+  margin-bottom: 1.5rem;
+}
+
+section#services {
+  background-color: #eee;
+}
+
+section#contact {
   text-align: center;
+}
+
+section#contact .section-heading h1 {
+  margin-bottom: 2.5rem;
+}
+
+section#contact .contact-text p {
+  max-width: 70rem;
+  margin: 0 auto;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+section#contact .contact-form {
+  margin-top: 2.5rem;
+}
+
+section#contact .contact-form form {
+  margin: 0 auto;
+  width: 70rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px solid #10221b;
+  border-radius: 99rem;
+  padding: 0.8rem;
+}
+
+section#contact .contact-form form input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1rem 0.5rem;
+  border-radius: 99rem;
+}
+
+section#contact .contact-form form a.btn {
+  border-radius: 99rem;
+  background-color: #10221b;
+  color: #fff;
+  font-weight: 600;
+  padding: 1rem 3.5rem;
+}
+
+section#contact .contact-form form a.btn:hover {
+  background-color: #fff;
+  color: #10221b;
+}
+
+section#client-logos {
+  background-color: #eee;
+}
+
+section#client-logos .row div {
+  text-align: center;
+}
+
+section#client-logos img {
+  height: 12rem;
 }
 
 .btn {
@@ -320,7 +464,12 @@ section#ideas .ideas-heading h1 {
   padding: 1.25rem 3rem;
   text-transform: capitalize;
   font-size: 1.7rem;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.btn-small {
+  font-size: 1.65rem;
+  padding: 1rem 2.4rem;
 }
 
 .btn:hover {
@@ -339,6 +488,7 @@ section#ideas .ideas-heading h1 {
   margin: 1rem auto;
   border-radius: 9999px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .ideas-cards .card-content {
@@ -356,8 +506,211 @@ section#ideas .ideas-heading h1 {
   margin-bottom: 2rem;
 }
 
-.ideas-cards .card-content a.btn {
-  font-size: 1.65rem;
-  padding: 1rem 2.4rem;
+.shop-cards-container .shopping-card {
+  width: 28rem;
+  border: 2px solid #10221b;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.shop-cards-container .shopping-card--img {
+  height: 30rem;
+  overflow: hidden;
+}
+
+.shop-cards-container .shopping-card--img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.shop-cards-container .shopping-card--text {
+  margin-bottom: 1.4rem;
+  text-align: center;
+}
+
+.shop-cards-container .shopping-card--text .featured-product-name {
+  font-size: 2rem;
+  margin-top: 1.125rem;
+}
+
+.shop-cards-container .shopping-card--text .featured-product-price {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0.8rem 0;
+  color: #219150;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 3rem;
+  color: #10221b;
+}
+
+.package-card {
+  width: 100%;
+  padding: 2rem;
+  margin-top: 3rem;
+  border: 2px solid #10221b;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.package-card--img {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.package-card--content {
+  text-align: center;
+  margin-top: 1.65rem;
+}
+
+.package-card--content h3,
+.package-card--content .package-pricing {
+  font-size: 2.2rem;
+  margin: 1rem 0;
+}
+
+.package-card--content .package-pricing {
+  color: #219150;
+  font-weight: 500;
+}
+
+.package-card--content p {
+  font-weight: 500;
+}
+
+.package-card--content a.btn {
+  border-radius: 5px;
+}
+
+.package-card--content a.btn:hover {
+  background-color: #fff;
+  color: #10221b;
+}
+
+.package-card:hover {
+  background-color: #10221b;
+}
+
+.package-card:hover h3,
+.package-card:hover p,
+.package-card:hover a {
+  color: #fff;
+  border-color: #fff;
+}
+
+.review-card {
+  width: 40rem;
+}
+
+.review-card .client-testimonial {
+  background-color: #eee;
+  padding: 2.4rem;
+  line-height: 2;
+  font-size: 1.55rem;
+  font-style: italic;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.review-card .client-testimonial::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5rem;
+  left: 0.7rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #eee;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.review-card .client-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.4rem;
+}
+
+.review-card .client-info .client-photo img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+}
+
+.review-card .client-info .client-name {
+  font-size: 1.86rem;
+  font-weight: 800;
+}
+
+.review-card .client-info .client-occupation {
+  color: #219150;
+  font-weight: 500;
+}
+
+.service-card {
+  padding: 2rem;
+  margin-top: 3rem;
+  border: 2px solid #10221b;
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.service-card--img {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.service-card--img img {
+  height: 10rem;
+}
+
+.service-card--content {
+  margin-top: 1.25rem;
+}
+
+.service-card--content h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #219150;
+}
+
+.service-card--content p {
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  line-height: 1.75;
+}
+
+.service-card--content a.btn {
+  border-radius: 5px;
+}
+
+.service-card--content a.btn:hover {
+  background-color: #fff;
+  color: #10221b;
+}
+
+.service-card:hover {
+  background-color: #10221b;
+}
+
+.service-card:hover img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.service-card:hover p,
+.service-card:hover a {
+  color: #fff;
+  border-color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
