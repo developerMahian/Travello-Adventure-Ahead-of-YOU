@@ -73,6 +73,10 @@ img {
   height: auto;
 }
 
+li {
+  list-style: none;
+}
+
 .zoom-effect-img {
   overflow: hidden;
 }
@@ -330,6 +334,45 @@ section#home .swiper-button-prev::after {
   font-size: 3rem;
 }
 
+footer#footer {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../images/footer-bg.jpg) center no-repeat fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/footer-bg.jpg) center no-repeat fixed;
+  background-size: cover;
+  text-transform: capitalize;
+  padding: 4rem 0;
+}
+
+footer#footer .row h3 {
+  font-size: 2rem;
+  padding: 1.5rem 0;
+  color: #fff;
+}
+
+footer#footer .row li {
+  margin: 1.5rem 0;
+}
+
+footer#footer .row a {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+footer#footer .row a:hover {
+  color: #219150;
+  width: 100%;
+}
+
+footer#footer .row a:hover i {
+  padding-right: 1rem;
+}
+
+footer#footer .row a i {
+  color: #219150;
+  padding-right: 0.5rem;
+}
+
 section#about {
   background-color: #eee;
 }
@@ -387,6 +430,20 @@ section#packages .section-heading h1 {
   margin-bottom: 1.5rem;
 }
 
+section#reviews .swiper-button-prev::after,
+section#reviews .swiper-button-next::after {
+  font-size: 2rem;
+  color: #10221b;
+}
+
+section#reviews .swiper-button-next::after {
+  margin-right: -3rem;
+}
+
+section#reviews .swiper-button-prev::after {
+  margin-left: -3rem;
+}
+
 section#services {
   background-color: #eee;
 }
@@ -412,7 +469,7 @@ section#contact .contact-form {
 
 section#contact .contact-form form {
   margin: 0 auto;
-  width: 70rem;
+  max-width: 70rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -450,9 +507,10 @@ section#client-logos {
 
 section#client-logos .row div {
   text-align: center;
+  margin: 4rem 0;
 }
 
-section#client-logos img {
+section#client-logos .row div img {
   height: 12rem;
 }
 

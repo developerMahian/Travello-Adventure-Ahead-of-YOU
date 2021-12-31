@@ -49,6 +49,22 @@ section#packages {
 	}
 }
 
+section#reviews {
+	.swiper-button-prev::after,
+	.swiper-button-next::after {
+		font-size: 2rem;
+		color: $secondary-color;
+	}
+
+	.swiper-button-next::after {
+		margin-right: -3rem;
+	}
+
+	.swiper-button-prev::after {
+		margin-left: -3rem;
+	}
+}
+
 section#services {
 	background-color: $tertiary-color;
 }
@@ -72,7 +88,7 @@ section#contact {
 
 		form {
 			margin: 0 auto;
-			width: 70rem;
+			max-width: 70rem;
 			display: flex;
 			border: 2px solid $secondary-color;
 			border-radius: 99rem;
@@ -107,9 +123,10 @@ section#client-logos {
 
 	.row div {
 		text-align: center;
-	}
+		margin: 4rem 0;
 
-	img {
-		height: 12rem;
+		img {
+			height: 12rem;
+		}
 	}
 }

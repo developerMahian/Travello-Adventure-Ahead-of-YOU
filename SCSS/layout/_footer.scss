@@ -1,0 +1,40 @@
+footer#footer {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url(../images/footer-bg.jpg) center no-repeat fixed;
+	background-size: cover;
+	text-transform: capitalize;
+	padding: 4rem 0;
+
+	.row {
+		h3 {
+			font-size: 2rem;
+			padding: 1.5rem 0;
+			color: $white-color;
+		}
+
+		li {
+			margin: 1.5rem 0;
+		}
+
+		a {
+			font-size: 1.4rem;
+			font-weight: 500;
+			color: $white-color;
+			padding: 1rem 0;
+
+			&:hover {
+				color: $primary-color;
+				width: 100%;
+
+				i {
+					padding-right: 1rem;
+				}
+			}
+
+			i {
+				color: $primary-color;
+				padding-right: 0.5rem;
+			}
+		}
+	}
+}
