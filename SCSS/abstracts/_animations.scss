@@ -1,0 +1,21 @@
+@keyframes sliderArrowRight {
+	0% {
+		transform: translateX(0);
+		opacity: 0.4;
+	}
+	100% {
+		transform: translateX(-0.4rem);
+		opacity: 0.9;
+	}
+}
+
+@keyframes sliderArrowLeft {
+	0% {
+		transform: translateX(0);
+		opacity: 0.4;
+	}
+	100% {
+		transform: translateX(0.4rem);
+		opacity: 0.9;
+	}
+}

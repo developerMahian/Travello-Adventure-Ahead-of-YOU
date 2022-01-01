@@ -1,10 +1,31 @@
 "use strict";
 
+// Mobile Navigation...
+const mobileNavOpenBtn = document.getElementById("mobile-menu-open");
+const mobileNavCloseBtn = document.getElementById("mobile-menu-close");
+const navigation = document.getElementById("navigation");
+
+mobileNavOpenBtn.onclick = () => {
+	navigation.classList.add("show-mobile-menu");
+};
+
+mobileNavCloseBtn.onclick = () => {
+	navigation.classList.remove("show-mobile-menu");
+};
+
+// Closing Opened Mobile menu when clicking outside..
+document.onclick = (e) => {
+	!navigation.contains(e.target) && e.target != mobileNavOpenBtn
+		? navigation.classList.remove("show-mobile-menu")
+		: null;
+};
+
 // Header Snap on Scroll...
 const headerEl = document.getElementById("header");
 
 window.onscroll = () => {
-	headerEl.classList.remove("snap");
+	// hide mobile nav on scrolling..
+	navigation.classList.remove("show-mobile-menu");
 
 	window.scrollY > 0
 		? headerEl.classList.add("snap")
@@ -12,8 +33,6 @@ window.onscroll = () => {
 };
 
 window.onload = () => {
-	headerEl.classList.remove("snap");
-
 	window.scrollY > 0
 		? headerEl.classList.add("snap")
 		: headerEl.classList.remove("snap");
@@ -24,23 +43,14 @@ const searchBox = document.getElementById("nav-search-box");
 const openSearch = document.getElementById("open-search");
 const closeSearch = document.getElementById("close-search");
 
-openSearch.addEventListener("click", () =>
-	searchBox.classList.add("search-active")
-);
+openSearch.onclick = () => searchBox.classList.add("search-active");
 
-closeSearch.addEventListener("click", () =>
-	searchBox.classList.remove("search-active")
-);
+closeSearch.onclick = () => searchBox.classList.remove("search-active");
 
-// Home Banner Swiper Slider...
-var swiper = new Swiper(".home-slider", {
+// Common swiper properties...
+var swiper = new Swiper(".swiper", {
 	loop: true,
 	grabCursor: true,
-	watchSlidesProgress: true,
-	// If we need pagination
-	pagination: {
-		el: ".swiper-pagination",
-	},
 	// Navigation arrows
 	navigation: {
 		nextEl: ".swiper-button-next",
@@ -50,13 +60,6 @@ var swiper = new Swiper(".home-slider", {
 
 // Shop Featured Products Swiper Slider...
 var swiper = new Swiper(".shop-slider", {
-	loop: true,
-	grabCursor: true,
-	// Navigation arrows
-	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev",
-	},
 	breakpoints: {
 		0: {
 			slidesPerView: 1,
@@ -78,8 +81,6 @@ var swiper = new Swiper(".shop-slider", {
 
 // Reviews Swiper Slider...
 var swiper = new Swiper(".reviews-slider", {
-	loop: true,
-	grabCursor: true,
 	breakpoints: {
 		0: {
 			slidesPerView: 1,

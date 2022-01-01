@@ -10,7 +10,7 @@ section#home {
 
 	.swiper-slide {
 		.slider-box {
-			background-position: bottom;
+			background-position: bottom left;
 			background-repeat: no-repeat;
 			background-size: cover;
 			display: flex;
@@ -23,6 +23,7 @@ section#home {
 			}
 			&.slider-box-2 {
 				background-image: url("/images/home-bg-2.jpg");
+				background-position: bottom right;
 				justify-content: flex-start;
 			}
 			&.slider-box-3 {
@@ -48,8 +49,9 @@ section#home {
 				}
 
 				p {
+					font-size: 1.7rem;
 					font-weight: 500;
-					line-height: 2;
+					line-height: 1.85;
 					padding: 1rem 0;
 				}
 
@@ -64,5 +66,21 @@ section#home {
 	.swiper-button-prev::after {
 		color: $secondary-color;
 		font-size: 3rem;
+	}
+}
+
+@media (max-width: 768px) {
+	section#home .swiper-slide .slider-box {
+		background-position: right;
+		justify-content: center;
+
+		&.slider-box-2 {
+			background-position: left;
+			justify-content: center;
+		}
+
+		.slider-content {
+			text-align: center;
+		}
 	}
 }
