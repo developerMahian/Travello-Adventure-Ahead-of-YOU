@@ -48,7 +48,7 @@ openSearch.onclick = () => searchBox.classList.add("search-active");
 closeSearch.onclick = () => searchBox.classList.remove("search-active");
 
 // Common swiper properties...
-var swiper = new Swiper(".swiper", {
+var swiper = new Swiper(".home-slider", {
 	loop: true,
 	grabCursor: true,
 	// Navigation arrows
@@ -60,6 +60,13 @@ var swiper = new Swiper(".swiper", {
 
 // Shop Featured Products Swiper Slider...
 var swiper = new Swiper(".shop-slider", {
+	loop: true,
+	grabCursor: true,
+	// Navigation arrows
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
 	breakpoints: {
 		0: {
 			slidesPerView: 1,
@@ -81,6 +88,13 @@ var swiper = new Swiper(".shop-slider", {
 
 // Reviews Swiper Slider...
 var swiper = new Swiper(".reviews-slider", {
+	loop: true,
+	grabCursor: true,
+	// Navigation arrows
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
 	breakpoints: {
 		0: {
 			slidesPerView: 1,
@@ -89,7 +103,7 @@ var swiper = new Swiper(".reviews-slider", {
 			slidesPerView: 2,
 			spaceBetween: 15,
 		},
-		1024: {
+		992: {
 			slidesPerView: 3,
 			spaceBetween: 25,
 		},

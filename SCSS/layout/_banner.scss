@@ -19,15 +19,15 @@ section#home {
 			justify-content: flex-end;
 
 			&.slider-box-1 {
-				background-image: url("/images/home-bg-1.jpg");
+				background-image: url("../images/home-bg-1.jpg");
 			}
 			&.slider-box-2 {
-				background-image: url("/images/home-bg-2.jpg");
+				background-image: url("../images/home-bg-2.jpg");
 				background-position: bottom right;
 				justify-content: flex-start;
 			}
 			&.slider-box-3 {
-				background-image: url("/images/home-bg-3.jpg");
+				background-image: url("../images/home-bg-3.jpg");
 			}
 
 			.slider-content {

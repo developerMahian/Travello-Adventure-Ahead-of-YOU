@@ -355,11 +355,11 @@ section#home .swiper-slide .slider-box {
 }
 
 section#home .swiper-slide .slider-box.slider-box-1 {
-  background-image: url("/images/home-bg-1.jpg");
+  background-image: url("../images/home-bg-1.jpg");
 }
 
 section#home .swiper-slide .slider-box.slider-box-2 {
-  background-image: url("/images/home-bg-2.jpg");
+  background-image: url("../images/home-bg-2.jpg");
   background-position: bottom right;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -367,7 +367,7 @@ section#home .swiper-slide .slider-box.slider-box-2 {
 }
 
 section#home .swiper-slide .slider-box.slider-box-3 {
-  background-image: url("/images/home-bg-3.jpg");
+  background-image: url("../images/home-bg-3.jpg");
 }
 
 section#home .swiper-slide .slider-box .slider-content {
@@ -602,6 +602,7 @@ section#client-logos .row div {
 
 section#client-logos .row div img {
   height: 12rem;
+  cursor: pointer;
 }
 
 .btn {
