@@ -591,16 +591,16 @@ section#contact .contact-form form a.btn:hover {
   color: #10221b;
 }
 
-section#client-logos {
+#client-logos {
   background-color: #eee;
 }
 
-section#client-logos .row div {
+#client-logos .row div {
   text-align: center;
   margin: 4rem 0;
 }
 
-section#client-logos .row div img {
+#client-logos .row div img {
   height: 12rem;
   cursor: pointer;
 }
